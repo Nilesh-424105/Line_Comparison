@@ -1,14 +1,14 @@
 package com.bridgelabz;
 
 /**
- *  // To Check Equality Of Two Lines
+ *  // To Check Comparison of Two Lines
  */
 
 import java.util.Scanner;
 
 public class Line_Comparison {
 	public static void main(String[] args) {
-		System.out.println("To Check Equality Of Two Lines: ");
+		System.out.println("To Check Comparison of Two Lines: ");
 		Scanner line = new Scanner(System.in);
 
 		// Take Input From User For Line1
@@ -32,19 +32,20 @@ public class Line_Comparison {
 		int b2 = line.nextInt();
 
 		// Calculate length of line1
-		double length_of_line1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-		System.out.println("length_of_line1 = " + length_of_line1);
+		Double length_1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+		System.out.println("length_1 = " + length_1);
 
 		// Calculate length of line2
-		double length_of_line2 = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
-		System.out.println("length_of_line2 = " + length_of_line2);
+		Double length_2 = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
+		System.out.println("length_2 = " + length_2);
 
-		// By Using if_else Condition to check Equality of lines
-		if (length_of_line1 == length_of_line2)
-			System.out.println("Both line are equal");
-
-		else
-			System.out.println("Both line are not equal");
+		// By Using if_elseif_else Condition to check Comparison of lines
+		if (length_1 > length_2) {
+			System.out.println("line_1 Greater Than line_2");
+		} else if (length_1 < length_2) {
+			System.out.println("line_1 Less Than line_2");
+		} else
+			System.out.println("Both lines are Equal");
 	}
 
 }
